@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" >
+<head>
+<meta charset="UTF-8">
+<title>Add New Student</title>
+</head>
+<body>
+<div align="center">
+<h1>Add New Student</h1>
+<form action="#" th:action="@{/save}" th:object=${student} method="post">
+<table border="0" cellpadding="10">
+<tr>
+<td> Student Name: </td>
+<td><input type="text" th:field="*{name}" /></td>
+</tr>
+<tr>
+<td> Student Email: </td>
+<td><input type="text" th:field="*{email}" /></td>
+</tr>
+<tr>
+<td> Student Address: </td>
+<td><input type="text" th:field="*{address}" /> </td>
+</tr>
+<tr>
+<td> Student Department: </td>
+<td>
+  <select id = "selColor" path="departmentname" th:field="*{department}">
+   <option value = "Computer Engineer">Computer Engineer</option>
+   <option value = "Machine Engineer">Machine Engineer</option>
+   <option value = "Psychology">Psychology</option>
+   <option value = "Civil Engineer">Civil Engineer</option>
+  </select>
+  </td>
+
+</tr>
+<tr>
+
+<td colspan="2"><button type="submit">Save</button></td>
+</tr>
+
+ </table>
+
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<c:when test="${mode=='MODE_LOGIN'}">
+<div>
+
+<h3>Login Page</h3>
+<form method="POST" action="/login-user">
+<div>
+<label>Name</label>
+<div>
+<input type="text" name="name" id="name" />
+
+</div>
+</div>
+<div>
+<label>Password</label>
+<div>
+<input type="password" name="password" />
+</div>
+</div>
+<div>
+<input type="submit" name="name" value="Login" onclick="myFunc()"/>
+</div>
+</form>
+</div>
+
+
+
+</c:when>
+<a href="link" id="demo" ></a>
+ <script>
+ function myFunc() {
+	 var skillsSelect = document.getElementById("name");
+	 var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
+		document.getElementById("demo").innerHTML = selectedText;
+ }
+ </script>
+</body>
+</html>
